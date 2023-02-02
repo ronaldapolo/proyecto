@@ -1,0 +1,45 @@
+<div id="contenedor">
+  <div id="tituloGeneral">
+    <h1>Laboratorios</h1>
+  </div>
+
+  <div id="botonCrearNuevo">
+    <button type="submit">
+      <a routerLink="/create-laboratory">
+        <div id="iconoBotonCrearNuevo">
+          <img src="../../assets/img/icons/white/plus.png">
+        </div>Nuevo
+      </a>
+    </button>
+  </div>
+
+  <div id="tabla">
+      <table class="table table-primary">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>        
+            <th scope="col">Número de Computadores</th>
+            <th scope="col">Descripción</th>                  
+            <!--<th scope="col">Editar</th>-->
+            <th scope="col">Eliminar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let laboratory of laboratories" class="">
+            <td>{{ laboratory.id }}</td>
+            <td>{{ laboratory.name }}</td>   
+            <td>{{ laboratory.capacity }}</td>   
+            <td><p style="color: black; font-size: 9px;">{{ laboratory.description }}</p></td>                                   
+            <!--<td>
+              <a [routerLink]="['/edit-laboratory', laboratory.id]"  href="/edit-laboratorie" style="cursor: pointer;" class="far fa-edit"></a>
+            </td>-->
+            <td>                                  
+              <i (click)="deleteLaboratory(laboratory.id)" style="cursor: pointer;" class="far fa-trash-alt"></i>                                                              
+            </td> 
+          </tr>
+        </tbody>
+      </table>
+  </div>
+
+</div>

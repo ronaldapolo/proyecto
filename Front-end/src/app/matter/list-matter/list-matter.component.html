@@ -1,0 +1,35 @@
+<div id="contenedor">
+  <div id="tituloGeneral">
+    <h1>Asignaturas</h1>
+  </div>
+</div>
+<div id="botonCrearNuevo">
+  <button type="submit">
+    <a routerLink="/create-subject">
+      <div id="iconoBotonCrearNuevo">
+        <img src="../../assets/img/icons/white/plus.png">
+      </div>Nuevo
+    </a>
+  </button>
+</div>
+<div id="tabla">  
+  <table class="table table-primary">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Asignaturas</th>        
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let subject of subjects" class="">
+        <td>{{ subject.id }}</td>
+        <td>{{ subject.name }}</td>                
+        <td>          
+          <a style="color: white;" class="btn btn-danger" (click)="deleteMatter(subject.id)">Eliminar</a>
+        </td>
+        
+      </tr>
+    </tbody>
+  </table>
+</div>

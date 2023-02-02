@@ -1,0 +1,100 @@
+<router-outlet></router-outlet>
+<header>
+  <div class="container">
+    <input type="checkbox" name="" id="check">
+
+    <div class="logo-container">
+      <h3 class="logo">
+        <a href="/home">
+          <img src="../../assets/img/logos/Logo GELABY NAVBAR.png" alt="Logo"> GELABY
+        </a>
+      </h3>
+    </div>
+
+    <div class="nav-btn">
+      <div class="nav-links">
+        <ul>
+          <li class="nav-link" style="--i: .6s">
+            <a href="/home">Inicio</a>
+          </li>
+          <li class="nav-link" style="--i: .85s">
+            <a href="/list-teachers">Docente<i class="fas fa-caret-down"></i></a>
+            <div class="dropdown">
+              <ul>
+                <li class="dropdown-link">
+                  <a href="/list-teachers">Docentes</a>
+                </li>
+                <li class="dropdown-link">
+                  <a href="/list-carrer">Carreras</a>
+                </li>
+                <li class="dropdown-link">
+                  <a href="/list-subject-teaching-detail">Docente Detalle</a>
+                </li>
+                <!--
+                <li class="dropdown-link">
+                  <a href="#">Periodo Lectivo</a>
+                </li>-->
+                <li class="dropdown-link">
+                  <a href="/list-subject">Asignaturas</a>
+                </li>
+                <li class="dropdown-link">
+                  <a href="/list-course">Cursos</a>
+                </li>
+                <div class="arrow"></div>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-link" style="--i: .85s">
+            <a href="/list-laboratory">Laboratorios<i class="fas fa-caret-down"></i></a>
+            <div class="dropdown">
+              <ul>
+                <!--
+                <li class="dropdown-link">
+                  <a href="/list-location">Ubicación</a>
+                </li>-->
+                <li class="dropdown-link">
+                  <a href="/list-lab-status">Estado</a>
+                </li>
+                <li class="dropdown-link">
+                  <a href="list-laboratory">Laboratorios</a>
+                </li>
+                <li class="dropdown-link">
+                  <a href="list-laboratory">Visualizar Laboratorios</a>
+                </li>
+                <li class="dropdown-link">
+                  <a href="/list-lab-matter-detail">Asignación de Laboratorio</a>
+                </li>
+                <div class="arrow"></div>
+              </ul>
+            </div>
+          </li><!--
+          <li class="nav-link" style="--i: 1.1s">
+            <a href="#">Configuración<i class="fas fa-caret-down"></i></a>
+            <div class="dropdown">
+              <ul>
+                <li class="dropdown-link">
+                  <a href="#">Configurar Horas</a>
+                </li>
+                <li class="dropdown-link">
+                  <a href="#">Control Laboratorios</a>
+                </li>
+                <div class="arrow"></div>
+              </ul>
+            </div>
+          </li>-->
+        </ul>
+      </div>
+
+      <div class="log-sign" style="--i: 1.8s">
+        <a routerLink="/logout" class="btn transparent">Cerrar Sesión</a>
+        <!--<a href="#" class="btn solid">Sign up</a>-->
+      </div>
+    </div>
+
+    <div class="hamburger-menu-container">
+      <div class="hamburger-menu">
+        <div></div>
+      </div>
+    </div>
+  </div>
+</header>

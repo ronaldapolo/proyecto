@@ -1,0 +1,62 @@
+<div id="contenedor">
+
+    <div id="tituloGeneral">
+        <h2>{{title}}</h2>
+    </div>
+
+    <form [formGroup]="myForm" (ngSubmit)="store()">
+        <div id="nombre" class="field">
+            <label for="name">Nombre</label>
+            <input pInputText type="text" formControlName="name">
+            <i *ngIf="nameField.valid" class="pi pi-check-circle"></i>
+        </div>
+
+        <div id="number" class="field">
+            <label for="number">Siglas</label>
+            <input pInputText type="text" name="" formControlName="number">
+            <i *ngIf="numberField.valid" class="pi pi-check-circle"></i>
+        </div>
+        
+        <div id="semesters">
+            <label for="semesters">Numero de Semestres</label>
+            <input type="number" name="" formControlName="semesters">
+            <i *ngIf="semestersField.valid" class="pi pi-check-circle"></i>
+        </div>
+
+        <div id="career">
+            <label for="career">Numero de Semestres</label>
+            <input type="number" name="" formControlName="career">
+            <i *ngIf="careerField.valid" class="pi pi-check-circle"></i>
+        </div>
+
+        <div id="parallel">
+            <label for="parallel">Numero de Semestres</label>
+            <input type="number" name="" formControlName="parallel">
+            <i *ngIf="parallelField.valid" class="pi pi-check-circle"></i>
+        </div>
+
+        <div id="shift">
+            <label for="shift">Numero de Semestres</label>
+            <input type="number" name="" formControlName="shift">
+            <i *ngIf="shiftField.valid" class="pi pi-check-circle"></i>
+        </div>
+    
+        <div id="botonGuardar" >
+            <button type="submit">
+                <div id="iconoBotonGuardar">
+                    <img src="../../assets/img/icons/white/save.png">
+                </div>Guardar
+            </button>
+        </div>
+
+        <div id="botonCancelar">
+            <button type="submit">
+                <a routerLink="/list-carrer">
+                <div id="iconoBotonCancelar">
+                    <img src="../../assets/img/icons/white/cross.png">
+                </div>Cancelar</a>
+            </button>
+        </div>
+        </form>
+
+</div>

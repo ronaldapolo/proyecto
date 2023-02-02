@@ -1,0 +1,27 @@
+<div id="contenedor">
+
+  <div id="tituloGeneral">
+    <h2>{{title}}</h2>
+  </div>
+  <form action="login">
+    <div class="container">
+        <label for="nombreUsuario">
+            <h5>Nombres</h5>
+        </label>
+        <br>
+        <input [(ngModel)]="createSubject.name" value="{{createSubject.name}}" name="name" id="nombreUsuario" placeholder="Example: Rodrigo Andres" type="text" required>
+    </div>                
+    <br>                
+    <div class="container d-flex align-items-center justify-content-center">
+      <div class="row">
+          <div class="col-lg-4">
+              <button (click)="updateMatter()" type="submmit" class="btn btn-primary">Crear Asignatura</button>
+          </div>
+          <div class="col-lg-4"></div>
+          <div class="col-lg-4">
+              <a href="list-subject" class="btn btn-danger" style="width: 400px;">Cancelar</a>
+          </div>
+      </div>                                    
+  </div>          
+</form>
+</div>
